@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>temka JS lr1-3</title>
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <script>
+             function getCurrentTime() {
+                var now = new Date();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+        
+                var TimeInput = document.getElementById("sec-hours");
+                TimeInput.value = hours + ":" + minutes;
+        }
+        </script>
+    </head>
+    <body>
+        <script src="js.js"></script>
+
+        <fieldset style="width: 200px;">
+            Вывод времени
+            <button onclick="getCurrentTime();">Вывести время</button> <br>
+            <input id="sec-hours" type="text" value="" placeholder="sec-hours" />
+        </fieldset>
+
+        <div id="polytech">Я учусь в политехе</div>
+            <br><br>
+
+            <fieldset style="width: 190px;">
+                Сортировка массива
+                <div>Массив до сортировки:</div>
+                <input id="before" type="text" />
+            
+                <div>Массив после сортировки:</div>
+                <input id="after" type="text" />
+                <br><br>
+            
+                <button onclick="sortArray()">Сортировать</button>
+            </fieldset>
+
+            <fieldset style="width: 440px;">
+                Расчёт по функции
+                <div>Значение выражения (2 * x + Math.sqrt(y) + (x - y)) / y + (1 / (Math.pow(x, 2) - 5)):</div>
+	            <input type="text" id="result"><br><br>
+	            <button onclick="calculate()">Вычислить</button>
+            </fieldset>
+            <br>
+
+            <fieldset style="width: 480px;">
+                S1:   <input type="text" id="S1">
+                S2:   <input type="text" id="S2"><br><br>
+                Длина S2:   <input type="text" id="length"><br><br>
+                Встречается ли в S1 слово "ПЗТ": <input type="text" id="contains1"><br><br>
+                10 символ строки S2: <input type="text" id="char10"><br><br>
+                ASCII код 10 символа строки S2: <input type="text" id="ascii"><br><br>
+
+                <button onclick="process()">Обработать</button>
+            </fieldset>
+        <script>
+            var polytechId = "polytech";
+            var polytechEl = document.getElementById(polytechId);
+
+            for (let i = 0; i < 20; i++) {
+                window.alert(polytechEl.innerHTML);
+            } 
+
+        function sortArray(){
+            var arr = [2, 5, 10, 15, 20, 25, 30, 35, 40, 45];
+            document.getElementById("before").value = arr;
+            var count = 0;
+        
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] % 5 === 0) {
+                    count++;
+                }
+            }
+            var inputElement = document.getElementById("after");
+            inputElement.value = count;
+        }
+
+
+        </script>
+    </body>
+</html>

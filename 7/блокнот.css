@@ -1,0 +1,28 @@
+body {
+	background-color:red;
+	font-family: "Arial";
+	font-size: 10pt;
+	color: blue;
+}
+
+p {
+	text-decoration: underline; /*подчёркнутый стиль текста*/
+	color: red; /*цвет текста красный*/
+	text-align: right;
+}
+
+.hobbies {
+	background-color: green;
+	width: 200pt; /*ширина блока*/
+	height: 250pt;
+	text-align: center;
+}
+
+#link {
+	color: yellow;
+}
+
+#link:hover {
+	color: green;
+	text-decoration: none;
+}
